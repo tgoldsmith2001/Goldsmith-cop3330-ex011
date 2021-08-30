@@ -25,6 +25,10 @@ public class Main {
         //Remove decimal from string for the purpose of calculations
         String N=n.replace(".","");
         for (int i = 0; i <= decimal+1; i++) {
+            //Checks for case where there aren't two decimal places
+            if(i==N.length()){
+                break;
+            }
             //Gets value at specific decimal index
             int decimal_value=Character.getNumericValue((N.charAt(i)));
             //Case where i is at location to be rounded up
